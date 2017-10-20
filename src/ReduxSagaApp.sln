@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReduxSagaApp.Api", "ReduxSagaApp.Api\ReduxSagaApp.Api.csproj", "{5D4CEF26-0E70-416A-8727-C934AECEEFC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapters", "Adapters", "{74CD8962-92EE-49E0-A2D2-7301A5C53270}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReduxSagaApp.Core", "ReduxSagaApp.Core\ReduxSagaApp.Core.csproj", "{7858DFCF-14BA-40F6-81AB-D97B27C0A8ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReduxSagaApp.Sql", "ReduxSagaApp.Sql\ReduxSagaApp.Sql.csproj", "{2A62DFCD-02FF-4AA4-9B7C-27AB67681078}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D4CEF26-0E70-416A-8727-C934AECEEFC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D4CEF26-0E70-416A-8727-C934AECEEFC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D4CEF26-0E70-416A-8727-C934AECEEFC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D4CEF26-0E70-416A-8727-C934AECEEFC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7858DFCF-14BA-40F6-81AB-D97B27C0A8ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7858DFCF-14BA-40F6-81AB-D97B27C0A8ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7858DFCF-14BA-40F6-81AB-D97B27C0A8ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7858DFCF-14BA-40F6-81AB-D97B27C0A8ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A62DFCD-02FF-4AA4-9B7C-27AB67681078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A62DFCD-02FF-4AA4-9B7C-27AB67681078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A62DFCD-02FF-4AA4-9B7C-27AB67681078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A62DFCD-02FF-4AA4-9B7C-27AB67681078}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5D4CEF26-0E70-416A-8727-C934AECEEFC6} = {74CD8962-92EE-49E0-A2D2-7301A5C53270}
+		{2A62DFCD-02FF-4AA4-9B7C-27AB67681078} = {74CD8962-92EE-49E0-A2D2-7301A5C53270}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65681322-81DF-4C86-AAF7-4CCCC7F66C1F}
+	EndGlobalSection
+EndGlobal
