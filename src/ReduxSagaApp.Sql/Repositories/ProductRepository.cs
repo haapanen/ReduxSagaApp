@@ -20,5 +20,10 @@ namespace ReduxSagaApp.Sql.Repositories
         {
             return DbContext.Products.Where(predicate).Include(x => x.Modules).ToListAsync();
         }
+
+        public new Task<List<Product>> QueryAllAsync()
+        {
+            return DbContext.Products.Include(x => x.Modules).ToListAsync();
+        }
     }
 }

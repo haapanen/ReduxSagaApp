@@ -23,7 +23,8 @@ namespace ReduxSagaApp.Core.Services
 
         public async Task<IList<Product>> GetProducts()
         {
-            return await _productRepository.QueryAllAsync();
+            return await _productRepository
+                .QueryAllAsync();
         }
     }
 }

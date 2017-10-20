@@ -25,7 +25,8 @@ namespace ReduxSagaApp.Sql
 
         public Task<List<T>> QueryAllAsync()
         {
-            return DbContext.Set<T>().ToListAsync();
+            return DbContext.Set<T>()
+                .ToListAsync();
         }
 
         public Task<List<T>> QueryAsync(Expression<Func<T, bool>> predicate)
