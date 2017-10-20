@@ -24,8 +24,8 @@ namespace ReduxSagaApp.Api.Controllers
         [HttpGet]
         public async Task<IEnumerable<Product>> Get()
         {
-            await Task.Delay(1000);
-            return await _productService.GetProducts();
+            var products = await _productService.GetProducts();
+            return products;
         }
     }
 }

@@ -6,9 +6,7 @@ import {productArray} from './schema';
 
 function *loadProducts() {
     try {
-        const products = yield call(new Api().getProducts);
-
-        const normalized = normalize(products, productArray);
+        const normalized = normalize(yield call(new Api().getProducts), productArray);
 
         yield put({
             type: ProductActions.ProductsLoadCompleted,
