@@ -1,11 +1,11 @@
 import {applyMiddleware, combineReducers, compose, createStore} from 'redux';
-import {productReducer} from "./productReducer";
+import {productReducer, ProductReducerState} from './productReducer';
 // import {DevTools} from './tools/DevTools';
 import createSagaMiddleware from "redux-saga";
 import {loadProductsSaga} from './productSagas';
 
 export interface AppState {
-
+    productReducer: ProductReducerState
 }
 
 const sagaMiddleware = createSagaMiddleware();

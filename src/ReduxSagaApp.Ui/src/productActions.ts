@@ -17,6 +17,10 @@ export interface ProductsLoadStarted extends Action {
 }
 export interface ProductsLoadCompleted extends Action {
     type: ProductActions.ProductsLoadCompleted;
+    payload: {
+        entities: any,
+        result: any
+    };
 }
 export interface ProductsLoadFailed extends Action {
     type: ProductActions.ProductsLoadFailed;
