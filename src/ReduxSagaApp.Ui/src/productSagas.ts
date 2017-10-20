@@ -1,14 +1,18 @@
 import {call, put, takeLatest} from 'redux-saga/effects';
 import {ProductActions} from './productActions';
 import {Api} from './api';
+import {normalize} from 'normalizr';
+import {productArray} from './schema';
 
 function *loadProducts() {
     try {
         const products = yield call(new Api().getProducts);
-        console.log(products)
+
+        const normalized = normalize(products, productArray);
+
         yield put({
             type: ProductActions.ProductsLoadCompleted,
-            payload: products
+            payload: normalized
         });
     } catch (e) {
         yield put({
