@@ -9,6 +9,7 @@ import {connect, DispatchProp} from 'react-redux';
 import {AppState} from './store';
 import {Product} from './product';
 import {RequestStatus} from './productReducer';
+import {ProductDetails} from './ProductDetails';
 
 export interface AppProps {
     products: Product[];
@@ -48,6 +49,7 @@ const App = withRouter(connect(mapStateToProps)(class extends React.Component<Di
                                 status={this.props.status}
                             />}
                         />
+                        <Route path="/product_details/:id" component={ProductDetails}/>
                     </div>
                 </div>
             </Container>
