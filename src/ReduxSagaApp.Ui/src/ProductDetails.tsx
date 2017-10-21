@@ -41,7 +41,6 @@ export const ProductDetails = connect(mapStateToProps)(class extends React.Compo
 });
 
 function mapStateToProps(state: AppState, ownProps: ProductDetailsOwnProps): Partial<ProductDetailsProps> {
-    console.log(ownProps);
     return {
         ...ownProps
     };

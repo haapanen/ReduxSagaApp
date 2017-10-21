@@ -2,7 +2,7 @@ import {applyMiddleware, combineReducers, compose, createStore} from 'redux';
 import {productReducer, ProductReducerState} from './productReducer';
 // import {DevTools} from './tools/DevTools';
 import createSagaMiddleware from "redux-saga";
-import {loadProductsSaga} from './productSagas';
+import {createProductsSaga, loadProductsSaga} from './productSagas';
 
 export interface AppState {
     productReducer: ProductReducerState
@@ -17,3 +17,4 @@ export const store = createStore(combineReducers({
 }), {}, composeEnhancers(applyMiddleware(sagaMiddleware)));
 
 sagaMiddleware.run(loadProductsSaga);
+sagaMiddleware.run(createProductsSaga);
