@@ -16,7 +16,6 @@ export class ProductList extends React.Component<ProductListProps> {
     }
 
     render(): JSX.Element {
-        console.log(this.props.products);
         return (
             <div>
                 <h2>Product list</h2>

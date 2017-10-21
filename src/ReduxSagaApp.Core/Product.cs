@@ -14,7 +14,7 @@ namespace ReduxSagaApp.Core
         [MaxLength(40)]
         public string Name { get; set; }
         public string Description { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = new DateTime();
         public DateTime? ModifiedAt { get; set; }
         [MaxLength(40)]
         public string CreatedBy { get; set; }

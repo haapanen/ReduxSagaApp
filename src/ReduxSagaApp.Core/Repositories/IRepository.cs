@@ -11,5 +11,7 @@ namespace ReduxSagaApp.Core.Repositories
     {
         Task<List<T>> QueryAllAsync();
         Task<List<T>> QueryAsync(Expression<Func<T, bool>> predicate);
+        Task AddAsync(T entity);
+        Task<int> SaveChangesAsync();
     }
 }

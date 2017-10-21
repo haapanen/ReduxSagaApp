@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 import {Dashboard} from './Dashboard';
-import {Route} from 'react-router';
+import {Route, withRouter} from 'react-router';
 import {Menu, Container} from "semantic-ui-react";
 import {NavLink} from 'react-router-dom';
 import {ProductListAsync} from './ProductListAsync';
@@ -22,7 +22,7 @@ function mapStateToProps(state: AppState, ownProps: any): Partial<AppProps> {
     };
 }
 
-const App = connect(mapStateToProps)(class extends React.Component<DispatchProp<any> & AppProps, { activeItem: string }> {
+const App = withRouter(connect(mapStateToProps)(class extends React.Component<DispatchProp<any> & AppProps, { activeItem: string }> {
 
     constructor(props?: DispatchProp<any> & AppProps, context?: any) {
         super(props, context);
@@ -63,6 +63,6 @@ const App = connect(mapStateToProps)(class extends React.Component<DispatchProp<
             type: "PRODUCTS_LOAD_STARTED"
         });
     }
-});
+}));
 
 export default App;

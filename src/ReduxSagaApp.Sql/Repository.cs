@@ -33,5 +33,15 @@ namespace ReduxSagaApp.Sql
         {
             return DbContext.Set<T>().Where(predicate).ToListAsync();
         }
+
+        public Task AddAsync(T entity)
+        {
+            return DbContext.Set<T>().AddAsync(entity);
+        }
+
+        public Task<int> SaveChangesAsync()
+        {
+            return DbContext.SaveChangesAsync();
+        }
     }
 }

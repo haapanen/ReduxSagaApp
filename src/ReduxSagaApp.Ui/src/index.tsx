@@ -9,9 +9,13 @@ import {store} from './store';
 import {Provider} from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 
+const getConfirmation = () => {
+    return window.confirm("Move away from current page?")
+}
+
 ReactDOM.render(
     <Provider store={store}>
-        <HashRouter>
+        <HashRouter getUserConfirmation={getConfirmation}>
             <App/>
         </HashRouter>
     </Provider>,

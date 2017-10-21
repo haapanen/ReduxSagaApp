@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ReduxSagaApp.Core;
+using ReduxSagaApp.Core.Models;
 using ReduxSagaApp.Core.ServiceContracts;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -24,8 +25,13 @@ namespace ReduxSagaApp.Api.Controllers
         [HttpGet]
         public async Task<IEnumerable<Product>> Get()
         {
-            var products = await _productService.GetProducts();
-            return products;
+            return await _productService.GetProducts();
+        }
+
+        [HttpPost]
+        public async Task<Product> Create([FromBody]ProductCreationModel model)
+        {
+            return await _productService.CreateProduct(model);
         }
     }
 }
